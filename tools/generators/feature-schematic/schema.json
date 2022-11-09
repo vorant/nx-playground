@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "feature-schematic",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Feature name (no need `feature-` prefix)",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "directory": {
+      "type": "string",
+      "description": "Directory inside `libs` folder",
+      "default": ""
+    }
+  },
+  "required": ["name"]
+}
